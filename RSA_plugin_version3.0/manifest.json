@@ -1,0 +1,33 @@
+{
+	
+	"manifest_version": 2,
+
+  "name": "RSA_plugin",
+  "description": "A Encryption and decryption plug-in.Running in the Chrome browser.Copyright (c) 2017 chaim,email:609295386@qq.com",
+  "version": "3.0.1",
+
+  "browser_action": {
+    "default_icon": "1.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+//		"fileSystem",
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+ 
+
+
+
+"background":{
+	"scripts":["background.js"]
+},
+
+
+"content_scripts": [ 
+{ 
+"js": [ "bin/jquery.min.js","bin/jsencrypt.min.js","test.js"],
+"matches": [ "<all_urls>" ]
+} 
+]
+}
